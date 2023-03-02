@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 1</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 1.</h2>
+      <p>
+        Створити функцію, яка за номером місяця повертає пору року, до якої
+        відноситься цей місяць.
+      </p>
+    </div>
+    <script>
+      //ввести данні
+      let userNumberMonth = parseInt(prompt("Введіть номер місяця", "1"));
+
+      //опис функції
+      function getSeasonOfYear(monthNumber) {
+        switch (monthNumber) {
+          case 12:
+          case 1:
+          case 2:
+            return "ЗИМА";
+            break;
+          case 3:
+          case 4:
+          case 5:
+            return "ВЕСНА";
+            break;
+          case 6:
+          case 7:
+          case 8:
+            return "ЛІТО";
+            break;
+          case 9:
+          case 10:
+          case 11:
+            return "ОСІНЬ";
+            break;
+          default:
+            return "Ви ввели неправильне значення";
+            break;
+        }
+      }
+      document.write(`<h3>${getSeasonOfYear(userNumberMonth)}</h3>`);
+    </script>
+  </body>
+</html>

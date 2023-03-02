@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 4</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 4.</h2>
+      <p>Створити окремі функції, які для 4 чисел знаходять:</p>
+      <ul>
+        <li>суму;</li>
+        <li>добуток;</li>
+        <li>середнє арифметичне;</li>
+        <li>мінімальне значення.</li>
+      </ul>
+    </div>
+
+    <script>
+      let userNumber1 = parseInt(prompt("Введіть перше число", "1"));
+      let userNumber2 = parseInt(prompt("Введіть перше число", "1"));
+      let userNumber3 = parseInt(prompt("Введіть перше число", "1"));
+      let userNumber4 = parseInt(prompt("Введіть перше число", "1"));
+
+      function getSum(numb1, numb2, numb3, numb4) {
+        sumRes = numb1 + numb2 + numb3 + numb4;
+        return sumRes;
+      }
+
+      function getMultipl(numb1, numb2, numb3, numb4) {
+        multiplRes = numb1 * numb2 * numb3 * numb4;
+        return multiplRes;
+      }
+
+      function getArithmeticMean(numb1, numb2, numb3, numb4) {
+        arithmeticMeanRes = (numb1 + numb2 + numb3 + numb4) / 4;
+        return arithmeticMeanRes;
+      }
+
+      function getMinNumber(numb1, numb2, numb3, numb4) {
+        MinNumber = Infinity;
+        if (numb1 < MinNumber) MinNumber = numb1;
+        if (numb2 < MinNumber) MinNumber = numb2;
+        if (numb3 < MinNumber) MinNumber = numb3;
+        if (numb4 < MinNumber) MinNumber = numb4;
+        return MinNumber;
+      }
+
+      document.write(
+        `<h3>сума = ${getSum(
+          userNumber1,
+          userNumber2,
+          userNumber3,
+          userNumber4
+        )}</h3>`
+      );
+      document.write(
+        `<h3>добуток = ${getMultipl(
+          userNumber1,
+          userNumber2,
+          userNumber3,
+          userNumber4
+        )}</h3>`
+      );
+      document.write(
+        `<h3>середнє арифметичне = ${getArithmeticMean(
+          userNumber1,
+          userNumber2,
+          userNumber3,
+          userNumber4
+        )}</h3>`
+      );
+      document.write(
+        `<h3>мінімальне значення = ${getMinNumber(
+          userNumber1,
+          userNumber2,
+          userNumber3,
+          userNumber4
+        )}</h3>`
+      );
+    </script>
+  </body>
+</html>

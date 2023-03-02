@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 2</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 2.</h2>
+      <p>Створити функцію, яка за номером місяця повертає його назву.</p>
+    </div>
+    <script>
+      let userNumberMonth = parseInt(
+        prompt("Введіть номер місяця", "від 1 до 12")
+      );
+
+      //опис функції
+      function getMonthName(monthNumber) {
+        switch (monthNumber) {
+          case 1:
+            return "СІЧЕНЬ";
+            break;
+          case 2:
+            return "ЛЮТИЙ";
+            break;
+          case 3:
+            return "БЕРЕЗЕНЬ";
+            break;
+          case 4:
+            return "КВІТЕНЬ";
+            break;
+          case 5:
+            return "ТРАВЕНЬ";
+            break;
+          case 6:
+            return "ЧЕРВЕНЬ";
+            break;
+          case 7:
+            return "ЛИПЕНЬ";
+            break;
+          case 8:
+            return "СЕРПЕНЬ";
+            break;
+          case 9:
+            return "ВЕРЕСЕНЬ";
+            break;
+          case 10:
+            return "ЖОВТЕНЬ";
+            break;
+          case 11:
+            return "ЛИСТОПАД";
+            break;
+          default:
+            return "ГРУДЕНЬ";
+            break;
+        }
+      }
+
+      document.write(`<h3>${getMonthName(userNumberMonth)}</h3>`);
+    </script>
+  </body>
+</html>

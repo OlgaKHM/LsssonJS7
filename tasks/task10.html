@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 10</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 10.</h2>
+      <p>
+        Дано покази температур (довільна кількість). Розробити функцію, яка
+        дозволить підрахувати кількість від’ємних показів температури.
+      </p>
+    </div>
+    <script>
+      let counterTemperature = 0;
+      document.write(`Покази температур: `);
+      for (let i = 0; i < 10; i++) {
+        let randomTemperature = Math.floor(Math.random() * 100) - 50;
+        document.write(` ${randomTemperature},`);
+        function getCounterTemperature(randomTemperature) {
+          if (randomTemperature < 0) counterTemperature++;
+        }
+        getCounterTemperature(randomTemperature);
+      }
+      document.write(
+        `<h3>кількість від’ємних показів температури ${counterTemperature}</h3>`
+      );
+    </script>
+  </body>
+</html>

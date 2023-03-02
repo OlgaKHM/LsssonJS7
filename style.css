@@ -1,0 +1,112 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #18181b;
+  background-image: url("./img/Vesivehmaistenkoulu-6-614x346.jpg");
+}
+
+.wrapper {
+  max-width: 1950px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  text-align: center;
+  color: #04046d;
+}
+
+h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #36f806;
+  text-shadow: 0 0 20px #04046d;
+  padding-left: 50px;
+}
+
+h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: #f8c006;
+  text-shadow: 0 0 20px #010129;
+  text-align: center;
+}
+
+ol li {
+  padding: 5px 15px;
+
+  margin-bottom: 10px;
+}
+
+ul li,
+span,
+td,
+.tekst {
+  padding: 5px 15px;
+
+  margin-bottom: 10px;
+}
+table {
+  display: inline-flex;
+}
+td,
+table {
+  border: 1px solid #04046d;
+}
+table,
+.tekst {
+  text-align: center;
+}
+td {
+  background-color: rgba(255, 255, 255, 0.533);
+}
+
+p {
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #04046d;
+}
+
+a:hover {
+  color: #36f806;
+  text-shadow: 0 0 10px #010129;
+}
+
+p {
+  margin-top: 10px;
+}
+.img {
+  display: inline-flex;
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.441);
+}
+.img img {
+  width: 100%;
+  height: auto;
+}
+.bunner {
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  border: 2px solid #36f806;
+  background-color: rgba(255, 255, 255, 0.529);
+  padding: 15px;
+}
+.bunner img {
+  width: 100%;
+  height: auto;
+}

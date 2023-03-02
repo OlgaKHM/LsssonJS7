@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 3</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 3.</h2>
+      <p>
+        Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день
+        робочим.
+      </p>
+    </div>
+    <script>
+      let dayNumber = parseInt(prompt("Введіть номер дня тижня", "від 1 до 7"));
+
+      //опис функції
+      function getWorkingDayOff(dayNumber) {
+        if (dayNumber <= 5) return "РОБОЧИЙ ДЕНЬ";
+        else return "ВИХІДНИЙ ДЕНЬ";
+      }
+
+      document.write(`<h3>${getWorkingDayOff(dayNumber)}</h3>`);
+    </script>
+  </body>
+</html>

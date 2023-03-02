@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 7</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 7.</h2>
+      <p>
+        Створити функцію, яка створює таблицю з вказаною кількістю рядків і
+        стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+      </p>
+    </div>
+
+    <script>
+      //ввести данні
+      const userNumberRow = parseInt(prompt("Введіть кількість рядків", "1"));
+      const userNumberColumn = parseInt(
+        prompt("Введіть кількість рядків", "1")
+      );
+
+      function getTable(userNumberRow, userNumberColumn) {
+        document.write(`<table> <tbody>`);
+        for (let i = 1; i <= userNumberRow; i++) {
+          document.write(`<tr>`);
+          for (let j = 1; j <= userNumberColumn; j++) {
+            document.write(`<td><h3> Hello </h3></td>`);
+          }
+          document.write(`</tr>`);
+        }
+        document.write(`</table> </tbody>`);
+      }
+      getTable(userNumberRow, userNumberColumn);
+    </script>
+  </body>
+</html>

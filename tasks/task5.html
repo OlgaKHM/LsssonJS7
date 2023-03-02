@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 5</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 5.</h2>
+      <p>
+        Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька
+        результатів: кількість парних, кількість додатних, кількість більших за
+        100.
+      </p>
+    </div>
+    <script>
+      let userNumber1 = parseInt(prompt("Введіть перше число", "1"));
+      let userNumber2 = parseInt(prompt("Введіть перше число", "1"));
+      let userNumber3 = parseInt(prompt("Введіть перше число", "1"));
+      let counterEvenNumbers = 0;
+      let counterPositiveNumbers = 0;
+      let counterMore100Numbers = 0;
+
+      function getEvenNumbers(numb1, numb2, numb3) {
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] % 2 === 0) counterEvenNumbers++;
+        }
+        return counterEvenNumbers;
+      }
+
+      function getPositiveNumbers(numb1, numb2, numb3) {
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] > 0) counterPositiveNumbers++;
+        }
+        return counterPositiveNumbers;
+      }
+
+      function getMore100Numbers(numb1, numb2, numb3) {
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] > 100) counterMore100Numbers++;
+        }
+        return counterMore100Numbers;
+      }
+
+      document.write(
+        `<h3>кількість парних = ${getEvenNumbers(
+          userNumber1,
+          userNumber2,
+          userNumber3
+        )}</h3>`
+      );
+      document.write(
+        `<h3>кількість додатних = ${getPositiveNumbers(
+          userNumber1,
+          userNumber2,
+          userNumber3
+        )}</h3>`
+      );
+      document.write(
+        `<h3>кількість більших за 100 = ${getMore100Numbers(
+          userNumber1,
+          userNumber2,
+          userNumber3
+        )}</h3>`
+      );
+    </script>
+  </body>
+</html>

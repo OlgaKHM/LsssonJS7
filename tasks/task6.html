@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 6</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 6.</h2>
+      <p>Створити окремі функції, які переводять:</p>
+      <ul>
+        <li>Сантиметри у дюйми;</li>
+        <li>Кілограми у фунти;</li>
+        <li>Кілометри у милі.</li>
+      </ul>
+    </div>
+    <script>
+      let userNumber1 = parseInt(prompt("Введіть кількість сантиметрів", "1"));
+      let userNumber2 = parseInt(prompt("Введіть кількість кілограмів", "1"));
+      let userNumber3 = parseInt(prompt("Введіть кількість кілометрів", "1"));
+      const centimeterInch = 0.394;
+      const kilogramPound = 2.2046;
+      const kilometerMile = 0.621;
+
+      function getCentimeterInch(numb1) {
+        return numb1 * centimeterInch;
+      }
+
+      function getKilogramPound(numb2) {
+        return numb2 * kilogramPound;
+      }
+
+      function getKilometerMile(numb3) {
+        return numb3 * kilometerMile;
+      }
+
+      document.write(
+        // `<h3>Сантиметри у дюйми ${userNumber} см. = ${getCentimeterInch(userNumber1)} дюймів</h3>`
+        `<h3>Сантиметри у дюйми : ${userNumber1} см. = ${getCentimeterInch(
+          userNumber1
+        )} дюймів</h3>`
+      );
+      document.write(
+        `<h3>Кілограми у фунти : ${userNumber2} кг. = ${getKilogramPound(
+          userNumber2
+        )} фунтів</h3>`
+      );
+      document.write(
+        `<h3>Кілометри у милі : ${userNumber3} км. = ${getKilometerMile(
+          userNumber3
+        )} миль</h3>`
+      );
+    </script>
+  </body>
+</html>

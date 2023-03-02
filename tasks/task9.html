@@ -1,0 +1,45 @@
+h<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 9</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 9.</h2>
+      <p>
+        Створити функцію, яка виводить банер (у функцію передаються: зображення,
+        заголовок та посилання, куди переходимо при кліку на зображення (тег img
+        повине знаходитись у середині тега a))
+      </p>
+    </div>
+    <script>
+      const userImgNumber = parseInt(
+        prompt("Виберіть номер зображення 1 до 4", "1")
+      );
+      const userHeader = prompt("Напишіть заголовок", "");
+      const userLink = prompt("Введіть адресу посилання", "");
+
+      function userBunner(userImgNumber, userHeader, userLink) {
+        document.write(`<div class="bunner">`);
+        document.write(`<h3>${userHeader}"></h3>`);
+        document.write(
+          `<a href="http://www.${userLink}"><img src="../img/img${userImgNumber}.png"></a>`
+        );
+
+        document.write(`</div>`);
+      }
+      userBunner(userImgNumber, userHeader, userLink);
+    </script>
+  </body>
+</html>
